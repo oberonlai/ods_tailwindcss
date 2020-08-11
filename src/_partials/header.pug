@@ -1,0 +1,9 @@
+each i in header
+  header.p-20
+    each j in i.navbar
+      h1.text-center#logo
+        img.mx-auto(src=j.src class='w-4/12')
+      ul.flex.space-x-10.mt-10.justify-center
+        each k in j.nav
+          li
+            a(href='#')=k.text

@@ -1,0 +1,34 @@
+{
+  "scripts": {
+    "build": "parcel build --no-content-hash src/js/script.js src/style.css src/img/** --no-source-maps -d assets",
+    "start": "parcel serve src/*.pug --no-source-maps -d dev"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.9",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
+    "postcss": "^7.0.32",
+    "postcss-nested": "^4.2.3",
+    "tailwindcss": "^1.6.2",
+    "uikit": "^3.4.2"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "js",
+      ".css": "css",
+      "img": [
+        ".jpg",
+        ".png",
+        ".svg"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  }
+}

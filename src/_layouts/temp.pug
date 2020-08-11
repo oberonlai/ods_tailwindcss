@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title ODS Starter feat Tailwindcss
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1')
+    link(rel='stylesheet' href='/style.css') 
+    link(rel='icon' href='/img/fav.png' type='image/png')
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,700,900&display=swap&subset=chinese-traditional" rel="stylesheet")
+
+    block head_end
+	
+  body.font-body
+
+    .container.mx-auto
+      
+      include ../_partials/header.pug
+
+      //- 內容區塊
+      .content
+        block content
+      
+      include ../_partials/footer.pug
+
+    script(src='/js/script.js')
+  
+    block body_end
